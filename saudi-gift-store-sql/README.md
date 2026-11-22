@@ -46,4 +46,4 @@ SELECT, GROUP BY, SUM, ROUND, CASE, INNER JOIN, LEFT JOIN, common table expressi
 
 ## Related project
 
-[Bilingual AI Conversation Evaluation](https://github.com/GHYD-ops/rws-ai-portfolio)
+[Bilingual AI Conversation Evaluation](../README.md)
