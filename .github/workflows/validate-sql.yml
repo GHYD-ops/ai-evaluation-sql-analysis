@@ -1,0 +1,23 @@
+name: Validate SQL analysis
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run reproducible SQL checks
+        run: python3 saudi-gift-store-sql/run_analysis.py
+
+      - name: Verify committed results are up to date
+        run: git diff --exit-code -- saudi-gift-store-sql/results.md
