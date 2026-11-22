@@ -1,55 +1,91 @@
-# RWS AI Portfolio
+# AI Evaluation & SQL Data Analysis
 
-Two AI-assisted self-directed learning samples by Ghaida Mohammed Althobaiti. The scenarios and data are fictional. The repository is not affiliated with RWS.
+**Self-directed portfolio project · 2026 · AI-assisted · Synthetic data**
 
-## Projects
+Two connected learning exercises exploring **bilingual AI conversation evaluation** and **reproducible business data analysis with SQL**. Both use a fictional Saudi gift-store scenario. This repository is a learning sample, not client work or a production system.
 
-1. [Bilingual AI Conversation Evaluation](#bilingual-ai-conversation-evaluation): Saudi Arabic and English business-conversation simulation and quality review.
-2. [Saudi Gift Store SQL Analysis](saudi-gift-store-sql/README.md): 12 executed SQLite queries, reproducible results, and interpretation of the same synthetic monthly data.
+## At a glance
 
-The SQL sample and documentation were prepared with AI assistance. The queries were executed and checked. These samples support learning and should be described with their actual level of assistance and understanding.
+| Area | What's included |
+| --- | --- |
+| AI response evaluation | A 13-exchange simulated business conversation in Saudi Arabic and English, plus a documented quality review |
+| Data analysis | 12 SQLite queries across synthetic sales, customer, channel, and complaint data |
+| Reproducibility | Python runner, SQL schema, saved outputs, and consistency checks |
+| Tools and concepts | Python, SQLite, SQL, CTEs, joins, window functions, data validation, and evidence-based interpretation |
 
-# Bilingual AI Conversation Evaluation
+## Explore the work
 
-**Self-Directed Portfolio Project | 2026**
+### 1. Bilingual AI Conversation Evaluation
 
-## Overview
+A fictional business stakeholder answers questions about sales trends, customer behavior, promotions, and operational issues. The exercise progresses from descriptive questions to hypotheses, missing-data checks, and practical recommendations.
 
-This project is a structured business-conversation simulation for a fictional Saudi online gift store. It demonstrates bilingual communication, scenario analysis, logical questioning, data interpretation, and recommendation writing in Saudi Arabic (Najdi) and English.
+- [Conversation transcript](conversation.md) — 13 bilingual exchanges
+- [Evaluation notes](evaluation.md) — consistency checks, strengths, weaknesses, and limits of the conclusions
 
-The scenario uses synthetic training data. It does not contain real customer, company, or financial information.
+**Scope:** The conversation was prepared as a self-directed, AI-assisted simulation; stakeholder responses were AI-generated. It is **not** a formal benchmark, professional translation assessment, or employer evaluation.
 
-## Scenario
+### 2. Saudi Gift Store SQL Analysis
 
-The store experienced growth from August to September, but repeat customers declined and operational complaints increased. The analysis explored:
+A reproducible SQL companion to the conversation, using invented monthly aggregates for August and September 2026.
 
-- Product performance
-- City performance
-- Sales-channel performance
-- New versus repeat customers
-- Average order value
-- Delivery, stock, and personalization issues
-- Data needed for a more reliable business conclusion
+- [SQL project overview](saudi-gift-store-sql/README.md)
+- [Schema and sample data](saudi-gift-store-sql/schema.sql)
+- [12 analysis queries](saudi-gift-store-sql/analysis.sql)
+- [Python execution and validation script](saudi-gift-store-sql/run_analysis.py)
+- [Query results](saudi-gift-store-sql/results.md)
+- [Findings and limitations](saudi-gift-store-sql/findings.md)
 
-## Skills Demonstrated
+The SQL covers joins, aggregations, common table expressions, window functions, rankings, revenue reconciliation, customer mix, and missing-data handling.
 
-- Bilingual written communication
-- Saudi Arabic (Najdi) and English communication
-- Business scenario analysis
-- Logical questioning and hypothesis development
-- Data-driven recommendations
-- Instruction following
-- Critical thinking and uncertainty awareness
+## Selected findings from the fictional dataset
 
-## Project Files
+| Measure | August 2026 | September 2026 |
+| --- | ---: | ---: |
+| Revenue (SAR) | 420,000 | 505,000 |
+| Orders | 1,240 | 1,430 |
+| Average order value (SAR) | 338.71 | 353.15 |
 
-- `conversation.md` - Full bilingual conversation transcript
-- `evaluation.md` - Quality review, consistency checks, and improvement notes
+- Revenue increased **20.24%**, while order volume increased **15.32%**.
+- Repeat-customer counts fell from **430** to **410**; this does **not** measure cohort retention.
+- Late delivery accounted for **62 of 186** complaints across the combined two-month dataset. The records do not identify a complaint month or city.
 
-## Key Outcome
+These are **synthetic figures**, not real business results. See the [detailed findings](saudi-gift-store-sql/findings.md) for what the data can and cannot support.
 
-The analysis identified a likely combination of promotion-led growth and weaker customer retention, while correctly treating this as a leading hypothesis rather than a confirmed conclusion. The recommended priorities were improving fulfillment reliability and focusing promotions on profitable customer retention.
+## Run the SQL analysis
 
-## Portfolio Note
+Requires **Python 3.9+**. No external Python packages, API keys, or production database are required.
 
-This is a self-directed learning project, not formal employment or client work.
+```bash
+git clone https://github.com/GHYD-ops/rws-ai-portfolio.git
+cd rws-ai-portfolio/saudi-gift-store-sql
+python3 run_analysis.py
+```
+
+The runner creates an in-memory SQLite database, executes all 12 queries, checks key results, and regenerates `results.md`.
+
+Expected terminal message:
+
+```text
+PASS: 12 SQL queries executed; integrity and business checks passed.
+Saved results.md
+```
+
+A GitHub Actions workflow also checks that the script completes and that the committed results are reproducible.
+
+## Interpretation and data limitations
+
+- Product, city, and sales-channel tables are **separate views of the same monthly revenue**. Their totals must not be added together.
+- Instagram and WhatsApp form **one combined channel** in the source data.
+- Repeat-customer counts are **not** a cohort retention rate.
+- Monthly aggregates cannot identify causes of changes in revenue, profit, or customer behavior.
+- Missing city data, including Taif, is treated as **unknown**, not zero.
+
+## AI assistance and attribution
+
+This repository documents **self-directed learning with AI assistance**. The scenario and numbers are fictional; the conversation's stakeholder answers were generated by AI. AI also assisted with preparation of SQL and documentation. The queries were executed and checked, and the repo includes the source files needed to reproduce them.
+
+This is **not** paid work, an employer deliverable, or evidence of independently building a production analytics system.
+
+---
+
+**Portfolio focus:** Artificial Intelligence · Data Analytics · SQL · Python
