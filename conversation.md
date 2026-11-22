@@ -4,6 +4,8 @@
 **Business:** Fictional Saudi online gift store  
 **Data type:** Synthetic training data
 
+**Editorial note:** This transcript is a revised learning simulation, not a real customer exchange. Its reported sales figures can be checked against the linked SQL dataset; operational explanations are fictional scenario statements, not independently verified findings.
+
 ## 1. Scenario Exploration
 
 ### Analyst - Saudi Arabic
@@ -98,18 +100,18 @@
 
 ### Analyst - Saudi Arabic
 
-هل أداء Instagram أفضل من الموقع؟ عطيني مقارنة بالأرقام.
+هل إيرادات إنستغرام أعلى من الموقع؟ عطيني مقارنة بالأرقام.
 
 ### Business Stakeholder
 
-لا، الموقع الإلكتروني أداؤه أعلى من إنستغرام من حيث قيمة المبيعات:
+ما نقدر نقارن إنستغرام وحده بالموقع؛ لأن التقرير يجمع مبيعات **إنستغرام وواتساب في قناة واحدة**. لكن نقدر نقارن قيمة إيرادات الموقع بهذه القناة المجمّعة:
 
 | القناة | أغسطس | سبتمبر |
 |---|---:|---:|
 | الموقع الإلكتروني | 210,000 ريال | 247,000 ريال |
 | إنستغرام وواتساب | 125,000 ريال | 150,000 ريال |
 
-الفارق كان 85,000 ريال في أغسطس و97,000 ريال في سبتمبر لصالح الموقع.
+إيرادات الموقع أعلى من القناة المجمعة بـ85,000 ريال في أغسطس و97,000 ريال في سبتمبر. هذا لا يثبت أن معدل التحويل أو الربحية أفضل؛ نحتاج بيانات الزيارات والتكاليف لكل قناة.
 
 ## 6. Customer Behavior
 
@@ -179,7 +181,7 @@ The most common complaints in August and September were:
 | Out-of-stock items or cancellations | 18 | 10% |
 | Wrong item or delivery address | 13 | 7% |
 
-Late delivery became more frequent in September, especially for Abha orders.
+These complaint counts cover both months together. They cannot show whether late deliveries became more frequent in September or in Abha. The separate scenario notes longer delivery times to Abha in September, but this table cannot validate that claim.
 
 ## 10. Data Needed for a Final Conclusion
 
@@ -210,11 +212,11 @@ Based on the available information, which possible cause seems most likely?
 
 ### Business Stakeholder
 
-The most likely explanation is a combination of promotion-led growth and weaker customer retention.
+A possible explanation is that promotions coincided with higher sales while operational friction may have affected repeat purchasing.
 
-September sales increased because new customers and average order value rose, supported by heavier discounts. However, repeat customers declined, while late deliveries, stock-outs, and personalization errors increased. This suggests operational issues may be discouraging repeat purchases, while promotions may be reducing profitability.
+The data shows higher revenue, more orders, a higher average order value, and fewer reported repeat customers. The simulated stakeholder also reports increased discounts and some fulfillment constraints. However, the complaints dataset has no month or city identifiers, so it cannot establish whether complaints increased or whether these issues caused the change in repeat-customer counts. Profitability and cohort retention are not measured.
 
-This is still a leading hypothesis, not a confirmed conclusion.
+This remains a hypothesis, not a confirmed causal conclusion.
 
 ## 12. Recommended Priority
 
@@ -226,9 +228,9 @@ What should the store prioritize first, and why?
 
 I would prioritize delivery reliability and stock availability first.
 
-Late delivery is the largest complaint category at 33%, Abha delivery times worsened, and repeat customers fell from 430 to 410. Stock-outs, especially in perfumes, also create cancellations and disappointment.
+Late delivery accounts for 62 of 186 complaints (33.33%) across the two months. Repeat-customer counts fell from 430 to 410, and the simulated stakeholder describes longer delivery times in Abha and temporary perfume stock-outs. Those observations justify investigation, not a conclusion that one issue caused another.
 
-Once fulfillment is stable, I would reassess promotions and channel spending, because higher discounts may be driving sales without improving loyalty or profit.
+Next, I would examine promotion profitability and customer-level retention before changing discounts or channel spending.
 
 ## 13. Final Summary
 
@@ -242,12 +244,14 @@ Based on the information provided, summarize the key findings and give two pract
 
 - Sales grew from 420,000 to 505,000 SAR; orders rose from 1,240 to 1,430.
 - Average order value increased from 339 to 353 SAR.
-- Growth was strongest in Riyadh, through the website, and in flowers and personalized gifts.
+- Riyadh had the largest **absolute city revenue increase** (40,000 SAR), while Abha had the highest **percentage city growth** (34.88%).
+- The website remained the largest channel by revenue; this does not establish the best conversion or profitability.
+- Personalized gifts had the largest absolute product revenue increase (26,000 SAR), while flowers remained the top product by revenue.
 - New customers increased from 780 to 910, while repeat customers declined from 430 to 410.
 - Late delivery was the most common complaint, representing 33% of complaints.
-- Higher discounts, stock-outs, and delivery delays may have increased sales while limiting profitability and repeat purchases.
+- The fictional scenario mentions discounts, stock constraints, and delivery delays. The available aggregates cannot show their causal effect on sales, profit, or repeat purchasing.
 
 ### Two recommendations
 
-1. Improve fulfillment first: address Abha delivery delays, strengthen stock planning for perfumes and gift materials, and add quality checks for personalized orders.
-2. Focus on profitable retention: reduce broad discounts, create targeted offers for repeat customers, and track margin, repeat purchase rate, and customer acquisition cost by channel.
+1. Investigate fulfillment: measure delivery performance by city and courier, review stock availability for perfumes and gift materials, and monitor personalization quality.
+2. Evaluate profitable retention before changing promotions: track margin, discount costs, repeat-purchase cohorts, and customer acquisition cost by channel.
