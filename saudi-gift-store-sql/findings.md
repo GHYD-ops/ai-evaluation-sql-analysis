@@ -23,4 +23,4 @@ An order-level dataset with order IDs, dates, customer IDs, city, channel, item 
 
 ## Provenance
 
-The figures originate from a fictional conversation supplied for a portfolio exercise. AI assistance was used to prepare the SQL and interpretation; the included runner executes the queries and validates key results. Learning and explaining the queries remains part of the project.
+The figures originate from a fictional conversation supplied for a portfolio exercise. The included runner executes the queries and validates key results; the main README explains the methodology and scope.
