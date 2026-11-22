@@ -1,6 +1,6 @@
 # Saudi Gift Store SQL Analysis
 
-Self-directed learning project | Ghaida Mohammed Althobaiti | 2026
+Self-directed learning project | Ghaida Mohammed | 2026
 
 ## Purpose
 
@@ -22,7 +22,7 @@ Product, city, and channel tables are **separate monthly breakdowns of the same 
 
 ## Run locally
 
-Python 3 is sufficient. No third-party packages or credentials are needed.
+Python 3.9 or later is required. No third-party packages or credentials are needed.
 
 ```sh
 cd saudi-gift-store-sql
