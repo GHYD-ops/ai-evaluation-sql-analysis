@@ -1,10 +1,10 @@
 # Saudi Gift Store SQL Analysis
 
-AI-assisted self-directed learning project | Ghaida Mohammed Althobaiti | 2026
+Self-directed learning project | Ghaida Mohammed Althobaiti | 2026
 
 ## Purpose
 
-Use SQL to check and extend a bilingual business-conversation simulation about a fictional Saudi online gift store. All numbers are synthetic training data, not actual company or customer information. The SQL and documentation were prepared with AI assistance and executed against SQLite. This is a learning portfolio sample, not employment or client work.
+Use SQL to check and extend a bilingual business-conversation simulation about a fictional Saudi online gift store. All numbers are synthetic training data, not actual company or customer information. The SQL queries were executed against SQLite and can be reproduced with the included Python runner. This is a learning portfolio sample, not employment or client work.
 
 ## Dataset and scope
 
